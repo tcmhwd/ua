@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html >
+
+        <body>
+            <div>
+	            <h1> Prediction models for UTI and UT-BSI</h1>
+
+                <form method="POST", action="{{ url_for('home')}}">
+                <h2>Urinalysis results: </h2>
+    	        <input type="text", name="Bacteria.q", placeholder="UA Bacteria", required="required" >
+                <input type="text", name="WBC.q", placeholder="UA WBC(10^9/L)", required="required" >
+                <input type="text", name="Specific.Gravity.ua", placeholder="UA SG", required="required" >
+                <br>
+                <h2>Routine laboratory findings: </h2>
+		        <input type="text", name="WBC.max", placeholder="WBC(109/L)", required="required" >
+                <input type="text", name="Monocyte.max", placeholder="Monocyte(10^9/L)", required="required" >
+                <input type="text", name="Lymphocyte.max", placeholder="Lymphocyte(10^9/L)", required="required" >
+                <input type="text", name="CRP,max", placeholder="CRP level(mg/L)", required="required" >
+                <br>
+                <h2>Demographic data: </h2>
+                <input type="text", name="dbp.max", placeholder="diastolic BP(mmHg)", required="required" >
+                <input type="text", name="sbp.max", placeholder="systolic BP(mmHg)", required="required" >
+                <input type="text", name="age", placeholder="patients' age", required="required" >
+
+                <input type="submit", value="predict !">
+            </form>
+                <br>
+                <br>
+
+            </div>
+        </body>
+    </html>
+
